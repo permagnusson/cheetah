@@ -31,6 +31,7 @@
 .idea/compiler.xml
 .idea/jarRepositories.xml
 .idea/modules.xml
+.idea/encodings.xml
 .idea/*.iml
 .idea/modules
 *.iml
@@ -45,8 +46,9 @@ cmake-build-*/
 # File-based project format
 *.iws
 
-# IntelliJ
+# IntelliJ and Maven
 out/
+target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
