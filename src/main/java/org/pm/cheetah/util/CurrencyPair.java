@@ -48,4 +48,8 @@ public class CurrencyPair {
     public QuoteBasis getQuoteBasis() {
         return m_quoteBasis;
     }
+
+    public String toString() {
+        return m_base + "/" + m_terms;
+    }
 }
