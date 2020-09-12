@@ -7,37 +7,37 @@ package org.pm.cheetah.util;
  */
 public class CurrencyPair {
 
-    private final Currency m_ccy1;
-    private final Currency m_ccy2;
+    private final Currency m_base;
+    private final Currency m_terms;
     private QuoteBasis m_quoteBasis;
 
     /**
-     * Creates a new instance ccy1 / ccy2.
+     * Creates a new currency pair instance for terms currency (numerator) / base currency (denominator).
      *
-     * @param ccy1 The first (numerator) currency
-     * @param ccy2 The second (denominator) currency
+     * @param base The base (numerator) currency
+     * @param terms The terms (denominator) currency
      */
-    public CurrencyPair(Currency ccy1, Currency ccy2) {
-        m_ccy1 = ccy1;
-        m_ccy2 = ccy2;
+    public CurrencyPair(Currency base, Currency terms) {
+        m_base = base;
+        m_terms = terms;
     }
 
     /**
-     * Returns the first currency.
+     * Returns the base currency.
      *
      * @return A Currency
      */
     public Currency getCurrency1() {
-        return m_ccy1;
+        return m_base;
     }
 
     /**
-     * Returns the second currency.
+     * Returns the terms currency.
      *
      * @return A Currency
      */
     public Currency getCurrency2() {
-        return m_ccy2;
+        return m_terms;
     }
 
     /**
