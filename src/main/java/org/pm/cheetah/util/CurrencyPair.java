@@ -9,6 +9,7 @@ public class CurrencyPair {
 
     private final Currency m_ccy1;
     private final Currency m_ccy2;
+    private QuoteBasis m_quoteBasis;
 
     /**
      * Creates a new instance ccy1 / ccy2.
@@ -37,5 +38,14 @@ public class CurrencyPair {
      */
     public Currency getCurrency2() {
         return m_ccy2;
+    }
+
+    /**
+     * Returns the quote basis.
+     *
+     * @return A QuoteBasis
+     */
+    public QuoteBasis getQuoteBasis() {
+        return m_quoteBasis;
     }
 }
