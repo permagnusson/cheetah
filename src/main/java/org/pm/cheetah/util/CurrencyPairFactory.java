@@ -18,7 +18,7 @@ public class CurrencyPairFactory {
 
     public CurrencyPair create(Currency ccy1, Currency ccy2) {
         CurrencyPair pair;
-        if (ccy1.getPriority() > ccy2.getPriority()) {
+        if (ccy1.getPriority() < ccy2.getPriority()) {
             pair = new CurrencyPair(ccy1, ccy2);
         } else {
             pair = new CurrencyPair(ccy2, ccy1);
