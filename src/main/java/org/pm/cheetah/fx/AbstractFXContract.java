@@ -2,6 +2,7 @@ package org.pm.cheetah.fx;
 
 import org.pm.cheetah.util.CurrencyPair;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -12,8 +13,14 @@ import java.util.Date;
 public class AbstractFXContract implements FXContract {
 
     protected CurrencyPair m_pair;
-    protected Date m_tradeDate;
-    protected Date m_valueDate;
+    protected BigDecimal m_rate;
+    protected Date m_date;
+
+    public AbstractFXContract(CurrencyPair pair, BigDecimal rate, Date date) {
+        m_pair = pair;
+        m_rate = rate;
+        m_date = date;
+    }
 
     @Override
     public CurrencyPair getCurrencyPair() {
@@ -21,12 +28,12 @@ public class AbstractFXContract implements FXContract {
     }
 
     @Override
-    public Date getTradeDate() {
-        return m_tradeDate;
+    public BigDecimal getRate() {
+        return m_rate;
     }
 
     @Override
     public Date getValueDate() {
-        return m_valueDate;
+        return m_date;
     }
 }
