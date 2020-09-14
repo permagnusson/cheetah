@@ -1,4 +1,4 @@
-package org.pm.cheetah.instrument;
+package org.pm.cheetah.fx;
 
 /**
  * Class representing a FX Forward.
