@@ -20,11 +20,18 @@ public interface FXContract {
     public CurrencyPair getCurrencyPair();
 
     /**
-     * Method to get the rate.
+     * Method to get the bid rate.
      *
      * @return The rate
      */
-    public BigDecimal getRate();
+    public BigDecimal getBidRate();
+
+    /**
+     * Method to get the ask rate.
+     *
+     * @return The rate
+     */
+    public BigDecimal getAskRate();
 
     /**
      * Method to get the value date.

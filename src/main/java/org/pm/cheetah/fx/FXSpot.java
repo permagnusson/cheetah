@@ -10,8 +10,15 @@ import java.util.Date;
  */
 public class FXSpot extends AbstractFXContract {
 
-
-    public FXSpot(CurrencyPair pair, BigDecimal rate, Date date) {
-        super(pair, rate, date);
+    /**
+     * Creates a new instance.
+     *
+     * @param pair    The currency pair
+     * @param bidRate The bid rate
+     * @param askRate The ask rate
+     * @param date    The value date
+     */
+    public FXSpot(CurrencyPair pair, BigDecimal bidRate, BigDecimal askRate, Date date) {
+        super(pair, bidRate, askRate, date);
     }
 }

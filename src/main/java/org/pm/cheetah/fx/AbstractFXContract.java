@@ -13,12 +13,22 @@ import java.util.Date;
 public class AbstractFXContract implements FXContract {
 
     protected CurrencyPair m_pair;
-    protected BigDecimal m_rate;
+    protected BigDecimal m_bidRate;
+    protected BigDecimal m_askRate;
     protected Date m_date;
 
-    public AbstractFXContract(CurrencyPair pair, BigDecimal rate, Date date) {
+    /**
+     * Creates a new instance.
+     *
+     * @param pair    The currency pair
+     * @param bidRate The bid rate
+     * @param askRate The ask rate
+     * @param date    The value date
+     */
+    public AbstractFXContract(CurrencyPair pair, BigDecimal bidRate, BigDecimal askRate, Date date) {
         m_pair = pair;
-        m_rate = rate;
+        m_bidRate = bidRate;
+        m_askRate = askRate;
         m_date = date;
     }
 
@@ -28,8 +38,13 @@ public class AbstractFXContract implements FXContract {
     }
 
     @Override
-    public BigDecimal getRate() {
-        return m_rate;
+    public BigDecimal getBidRate() {
+        return m_bidRate;
+    }
+
+    @Override
+    public BigDecimal getAskRate() {
+        return m_askRate;
     }
 
     @Override
