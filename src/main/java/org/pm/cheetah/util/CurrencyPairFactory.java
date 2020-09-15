@@ -16,6 +16,13 @@ public class CurrencyPairFactory {
         return m_instance;
     }
 
+    /**
+     * Method to create a new currency pair.
+     *
+     * @param ccy1 One currency
+     * @param ccy2 The other currency
+     * @return A currency pair
+     */
     public CurrencyPair create(Currency ccy1, Currency ccy2) {
         CurrencyPair pair;
         if (ccy1.getPriority() < ccy2.getPriority()) {
